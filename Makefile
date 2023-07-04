@@ -7,11 +7,22 @@ TARGET = exoMake
 build: main.c ${FILES}
 		${CC} ${FLAGS} -o ${TARGET} main.c ${FILES}
 
-run:
-	./exoMake
+testTXT: ${TARGET}
+			./${TARGET} < tests.tests.txt
 
-.PHONY: clean
+testPROG: test.c ${FILES}
+			${CC} ${FLAGS} -o test test.c ${FILES}
+			./test
+
+deploy: main.c ${FILES}
+		mkdir -p deploy
+		${CC} ${FLAGS} -o deploy/${TARGET} main.c ${FILES}
+
+.PHONY: clean deploy
 
 #Nettoyage
-clean:
-	rm -f exoMake
+clean: ${TARGET}
+		rm ${TARGET}
+		rm deploy/${TARGET}
+		rm -rf deploy
+		rm test
