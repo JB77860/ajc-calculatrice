@@ -17,7 +17,7 @@ int main()
     else if(menu == 3)
         printf("\n%d * %d\n = %d\n", argA, argB, multiplication(argA, argB));
     else if(menu == 4)
-        printf("\n%d / %d\n = %d\n", argA, argB, division(argA, argB));
+        printf("\n%d / %d\n = %f\n", argA, argB, division(argA, argB));
   }
   
     return (0);
