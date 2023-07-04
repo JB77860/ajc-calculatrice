@@ -11,13 +11,13 @@ int main()
   {
     scanf("%d %d %d", &menu, &argA, &argB);
     if(menu == 1)
-        printf("\n%d + %d\n", argA, argB, addition(argA, argB));
+        printf("\n%d + %d\n = %d\n", argA, argB, addition(argA, argB));
     else if(menu == 2)
-        printf("\n%d - %d\n", argA, argB, soustraction(argA, argB));
+        printf("\n%d - %d\n = %d\n", argA, argB, soustraction(argA, argB));
     else if(menu == 3)
-        printf("\n%d * %d\n", argA, argB, multiplication(argA, argB));
+        printf("\n%d * %d\n = %d\n", argA, argB, multiplication(argA, argB));
     else if(menu == 4)
-        printf("\n%d + %d\n", argA, argB, division(argA, argB));
+        printf("\n%d / %d\n = %d\n", argA, argB, division(argA, argB));
   }
   
     return (0);
